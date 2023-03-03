@@ -1,7 +1,10 @@
+from sensor.pipeline.training_pipeline import start_training_pipeline
+
+
 file_path = "train_FD001.txt"
 print(__name__)
 if __name__ == "__main__":
     try:
-        pass
+        start_training_pipeline()
     except Exception as e:
         print(e)
