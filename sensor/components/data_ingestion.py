@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sensor import utils
+from sensor.config import drop_cols_EDA
 
 
 class DataIngestion:
@@ -30,6 +31,9 @@ class DataIngestion:
 
             # replace na with Nan
             df.replace(to_replace="na", value=np.NAN, inplace=True)
+
+            # baesd on EDA drpoing columns
+            df.drop(columns=drop_cols_EDA, axis=1, inplace=True)
 
             # Save data in feature store
             logging.info("Create feature store folder if not available")
