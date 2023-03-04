@@ -33,7 +33,7 @@ class DataIngestion:
             df.replace(to_replace="na", value=np.NAN, inplace=True)
 
             # baesd on EDA drpoing columns
-            df.drop(columns=drop_cols_EDA, axis=1, inplace=True)
+            # df.drop(columns=drop_cols_EDA, axis=1, inplace=True)
 
             # Save data in feature store
             logging.info("Create feature store folder if not available")
