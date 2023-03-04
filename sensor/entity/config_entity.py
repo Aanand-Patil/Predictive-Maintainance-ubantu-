@@ -58,4 +58,4 @@ class DataValidationConfig:
         )
         self.report_file_path = os.path.join(self.data_validation_dir, "report.yaml")
         self.missing_threshold: float = 0.2
-        self.base_file_path = os.path.join("aps_failure_training_set1.csv")
+        self.base_file_path = os.path.join("train_FD001.txt")
