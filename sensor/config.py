@@ -17,3 +17,11 @@ class EnvironmentVariable:
 env_var = EnvironmentVariable()
 mongo_client = pymongo.MongoClient(env_var.mongo_db_url)
 TARGET_COLUMN = "class"
+
+# based on EDA droping columns list for model traing.
+
+drop_labels2 = ["s_1", "s_5", "s_6", "s_10", "s_16", "s_18", "s_19"]
+index_names = ["unit_number", "time_cycles"]
+setting_names = ["setting_1", "setting_2", "setting_3"]
+
+drop_cols_EDA = index_names + setting_names + drop_labels2
